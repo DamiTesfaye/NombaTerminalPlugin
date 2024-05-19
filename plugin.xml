@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-nomba-plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>NombaTerminalPlugin</name>
+
+<engines>
+        <engine name="cordova" version=">=7.1.0" />
+        <engine name="cordova-android" version=">=6.3.0" />
+        <engine name="cordova-ios" version="<4.4.0" />
+    </engines>
+
+    <js-module name="NombaTerminalActions" src="www/NombaTerminalActions.js">
+        <clobbers target="NombaTerminalActions" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="NombaTerminalPlugin">
+                <param name="android-package"
+                        value="com.nomba.terminal.plugin.NombaTerminalPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/app/NombaTerminalPlugin.java"
+                target-dir="src/com/nomba/terminal/plugin" />
+    </platform>
+</plugin>

@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 33
+        compileSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    namespace "com.nomba.terminal.plugin"
+}
+
+dependencies {
+    implementation "com.google.code.gson:gson:2.10.1"
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.21"
+
+    }
