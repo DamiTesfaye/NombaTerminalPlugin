@@ -12,6 +12,7 @@
         <clobbers target="NombaTerminalActions" />
     </js-module>
     <platform name="android">
+        <framework src="com.google.code.gson:gson:2.10.1" />
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="NombaTerminalPlugin">
                 <param name="android-package"
